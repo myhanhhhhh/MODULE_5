@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Thêm Mới</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <style>
+    #form {
+      background-color: #2F4F4F;
+      margin-left: 280px;
+      width: 90%;
+
+    }
+  </style>
+</head>
+<body>
+<iframe src="header.html" frameborder="2" width="100%" height="80px"></iframe>
+<div class="content col-lg-8 my-6 mb-0 wow fadeInUp" data-wow-delay="0.1s" style="margin-top: 2rem">
+  <div id="form" class=" text-center p-5">
+    <h1 class="mb-4" style="color: white">Sửa hợp đồng</h1>
+    <div class="row g-3">
+      <!--                name-->
+      <div class="col-12">
+        <div class="form-floating">
+          <input type="text" class="form-control border-0" id="name"
+                 placeholder="Số hợp đồng">
+          <label for="name">Số hợp đồng</label>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-floating">
+          <input type="date" class="form-control border-0" id="startDate"
+                 placeholder="Ngày bắt đầu">
+          <label for="startDate">Ngày bắt đầu</label>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-floating">
+          <input type="date" class="form-control border-0" id="endDate"
+                 placeholder="Ngày kết thúc">
+          <label for="endDate">Ngày kết thúc</label>
+        </div>
+      </div>
+      <!--                CMND-->
+      <div class="col-12">
+        <div class="form-floating">
+          <input type="text" class="form-control border-0" id="deposit"
+                 placeholder="Số tiền cọc trước ">
+          <label for="deposit">Số tiền cọc trước</label>
+        </div>
+      </div>
+
+      <!--                phone-->
+      <div class="col-12">
+        <div class="form-floating">
+          <input type="text" class="form-control border-0" id="total"
+                 placeholder="Tổng tiền thanh toán">
+          <label for="total">Tổng tiền thanh toán</label>
+        </div>
+      </div>
+      <div class="col-6">
+        <button class="btn btn-light w-100 py-3" type="button"><a href="contract_list.html">Hủy
+          bỏ</a></button>
+      </div>
+      <div class="col-6">
+        <button class="btn btn-dark w-100 py-3" type="submit">Xác nhận</button>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+<br>
+<br>
+</body>
+<iframe src="footer.html" frameborder="2" width="100%" height="220px"></iframe>
+
+<script src="https://cdn.datatables.net/1.13.5/js/dataTables.bootstrap5.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</html>

@@ -11,6 +11,9 @@
 </head>
 <body>
 <iframe src="header.html" frameborder="2" width="100%" height="80px"></iframe>
+<a>
+    <button style="margin-left: 10px" class="btn btn-primary">Thêm</button>
+</a>
 <h1 style="text-align: center">Danh sách hợp đồng</h1>
 <table class="table table-striped">
     <tr>
@@ -20,6 +23,7 @@
         <th>Ngày kết thúc</th>
         <th>Số tiền cọc trước</th>
         <th>Tổng số tiền thanh toán</th>
+        <th>Chức năng</th>
     </tr>
     <tr>
         <td>1</td>
@@ -28,6 +32,14 @@
         <td>2023-10-20</td>
         <td>1000000</td>
         <td>2000000</td>
+        <td><a>
+            <button class="btn btn-primary">Sửa</button>
+        </a>
+            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                    th:attr="onclick=|showInfo(${phieu.getId()},'${phieu.code}')|">
+                Xóa
+            </button>
+        </td>
     </tr>
     <tr>
         <td>2</td>
@@ -36,6 +48,14 @@
         <td>2023-10-20</td>
         <td>1000000</td>
         <td>2000000</td>
+        <td><a>
+            <button class="btn btn-primary">Sửa</button>
+        </a>
+            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                    th:attr="onclick=|showInfo(${phieu.getId()},'${phieu.code}')|">
+                Xóa
+            </button>
+        </td>
     </tr>
     <tr>
         <td>3</td>
@@ -44,6 +64,14 @@
         <td>2023-10-20</td>
         <td>1000000</td>
         <td>2000000</td>
+        <td><a>
+            <button class="btn btn-primary">Sửa</button>
+        </a>
+            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                    th:attr="onclick=|showInfo(${phieu.getId()},'${phieu.code}')|">
+                Xóa
+            </button>
+        </td>
     </tr>
     <tr>
         <td>4</td>
@@ -52,7 +80,16 @@
         <td>2023-10-20</td>
         <td>1000000</td>
         <td>2000000</td>
+        <td><a>
+            <button class="btn btn-primary">Sửa</button>
+        </a>
+            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                    th:attr="onclick=|showInfo(${phieu.getId()},'${phieu.code}')|">
+                Xóa
+            </button>
+        </td>
     </tr>
+
 
 </table>
 <br>
