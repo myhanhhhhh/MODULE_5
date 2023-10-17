@@ -14,7 +14,7 @@ const person = {
         university: "Harvard"
     }
 };
-const {firstName, lastName,education:{degree}, languages: [language]} = person;
+const {firstName, lastName, education:{degree}, languages: [language]} = person;
 let student = {
     firstName,
     lastName,
