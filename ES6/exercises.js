@@ -26,10 +26,10 @@ let courses = [
     },
 ];
 
-const exercises = courses.filter(rate => rate.rating >= 4);
+const rating = courses.filter(rate => rate.rating >= 4);
 const rating1 = courses.filter(rate => rate.rating < 4)
     .map(rate => `<${rate.id}> - <${rate.title}> - <${rate.rating}>`);
-console.log(exercises);
+console.log(rating);
 console.log(rating1);
 
 let addedCourses = [
