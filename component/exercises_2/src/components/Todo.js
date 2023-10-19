@@ -30,11 +30,13 @@ class Todo extends Component {
                 <h1>Todo List</h1>
                 <input type="text"
                        value={this.state.item}
-                       onChange={this.handleChange}/>
+                       onChange={(temp) => {
+                           this.handleChange(temp)
+                       }}/>
                 <button onClick={this.handleAddItem}>Add</button>
-                    {this.state.list.map((element, index) =>
-                        <p key={index}>{element}</p>
-                    )}
+                {this.state.list.map((element, index) =>
+                    <p key={index}>{element}</p>
+                )}
             </div>
         )
     }
