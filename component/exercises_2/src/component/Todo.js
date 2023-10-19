@@ -18,7 +18,6 @@ class Todo extends Component {
     handleAddItem = () => {
         if (this.state.item) {
             this.setState({
-                    ...this.state,
                     list: [...this.state.list, this.state.item]
                 }
             )
@@ -33,11 +32,9 @@ class Todo extends Component {
                        value={this.state.item}
                        onChange={this.handleChange}/>
                 <button onClick={this.handleAddItem}>Add</button>
-                <ul>
-                    {this.state.list.map((item, index) =>
-                        <li key={index}>{item}</li>
+                    {this.state.list.map((element, index) =>
+                        <p key={index}>{element}</p>
                     )}
-                </ul>
             </div>
         )
     }

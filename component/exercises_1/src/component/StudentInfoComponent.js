@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import ReactDOM from "react-dom/client";
 // import './index.css';
 // import App from './App';
-class studentInfoComponent extends Component {
+class StudentInfoComponent extends Component {
     constructor() {
         super();
         this.state = {
@@ -53,4 +53,4 @@ class studentInfoComponent extends Component {
     }
 }
 
-export default studentInfoComponent;
+export default StudentInfoComponent;
