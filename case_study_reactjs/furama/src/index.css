@@ -1,0 +1,25 @@
+footer {
+    background-color: #065f56;
+    color: white;
+}
+
+ul, li, a {
+    color: white;
+    font-family: Tahoma;
+    font-size: medium;
+}
+
+header nav {
+    background-color: #065f56;
+}
+.nav-item{
+    color: #ff333e;
+}
+.nav-item:hover {
+    color: #ff333e;
+}
+
+#content {
+    min-height: 100%;
+    margin-top: 40px
+}
