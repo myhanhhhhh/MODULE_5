@@ -3,8 +3,8 @@ import ReactDOM from "react-dom/client";
 // import './index.css';
 // import App from './App';
 class Todo extends Component {
-    constructor(props) {
-        super(props);
+    constructor() {
+        super();
         this.state =
             {
                 list: [],
