@@ -1,7 +1,9 @@
 footer {
     background-color: #065f56;
     color: white;
+    margin-top: 220px;
 }
+
 
 ul, li, a {
     color: white;
@@ -22,4 +24,21 @@ header nav {
 #content {
     min-height: 100%;
     margin-top: 40px
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 40px;
+    text-align: center;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    /*text-align: left;*/
+    padding: 8px;
+}
+h1{
+    text-align: center;
+    margin-top: 40px;
 }

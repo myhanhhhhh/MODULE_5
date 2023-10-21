@@ -1,12 +1,12 @@
 function Footer(){
     return(
-        <footer style={{width:"100%"}}>
+        <footer style={{width:"100%", height: "220px"}}>
             <div className="container">
                 <div className="row">
                     <div className="col-lg-6">
                         <div className="contact-info" style={{marginTop:"3%"}}>
                             <h3>Thông tin liên hệ</h3>
-                            <p>Địa chỉ: Số 105, Võ Nguyên Giáp, Phường Khuê Mỹ, Quận Ngũ Hành Sơn, Đà Nẵng</p>
+                            <p>Địa chỉ: Số 105, Võ Nguyên Giáp, Khuê Mỹ, Ngũ Hành Sơn, Đà Nẵng</p>
                             <p>Số điện thoại: 0706513500</p>
                             <p>Email: reservation@furamavietnam.com</p>
                         </div>

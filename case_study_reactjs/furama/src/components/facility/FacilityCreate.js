@@ -2,7 +2,7 @@ function FacilityCreate(){
     return(
         <div className="content col-lg-8 my-6 mb-0 wow fadeInUp" data-wow-delay="0.1s" style={{marginTop: "2rem"}}>
             <div id="form" className=" text-center p-5">
-                <h1 className="mb-4" style="color: white">Thêm mới dịch vụ</h1>
+                <h1 className="mb-4" style = {{color: "white"}}>Thêm mới dịch vụ</h1>
                 <div className="row g-3">
                     <div className="col-12">
                         <div className="form-floating">
@@ -42,7 +42,7 @@ function FacilityCreate(){
                     <div className="col-12">
                         <div className="form-floating">
                             <select className="form-control border-0" id="roomType"
-                                    placeholder="Tiêu chuẩn phòng" style="background-color: #ffffff">
+                                    placeholder="Tiêu chuẩn phòng" style = {{backgroundColor: "white"}}>
                                 <option>Standard</option>
                                 <option>Superior</option>
                                 <option>Executive</option>

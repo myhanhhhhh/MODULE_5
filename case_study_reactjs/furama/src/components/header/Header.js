@@ -3,7 +3,7 @@ function Header(){
         <header >
             <nav className="navbar navbar-expand-lg navbar-light">
                 <div className="container">
-                    <img style={{width:"40px"}} src="https://furamavietnam.com/wp-content/uploads/2018/10/logo.png"/>
+                    <a style={{color:"white",fontSize:"27px"}} className="navbar-brand" href="index.html">#Furama</a>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
                             data-bs-target="#navbarNav"
                             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
