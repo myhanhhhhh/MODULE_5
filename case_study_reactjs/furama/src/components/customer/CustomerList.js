@@ -10,7 +10,7 @@ function CustomerList() {
                 <table style={{width:"100%"}}>
                     <thead>
                     <tr>
-                        <th>ID</th>
+                        <th>STT</th>
                         <th>Tên</th>
                         <th>Ngày sinh</th>
                         <th>Giới tính</th>
@@ -23,9 +23,9 @@ function CustomerList() {
                     </tr>
                     </thead>
                     <tbody>
-                    {customers.map(customer => (
-                        <tr key={customer.id}>
-                            <td>{customer.id}</td>
+                    {customers.map((customer,index) => (
+                        <tr key={index}>
+                            <td>{index + 1}</td>
                             <td>{customer.name}</td>
                             <td>{customer.birthday}</td>
                             <td>{customer.gender === 0 ? 'Nam' : 'Nữ'}</td>

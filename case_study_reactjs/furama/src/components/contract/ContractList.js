@@ -5,22 +5,23 @@ function ContractList() {
     const contracts = getAll();
     return (
         <div>
-            <h1 style={{textAlign: "center"}}>Danh sách khách hàng</h1>
-            <div >
-                <table style={{width:"100%"}}>
+            <h1 style={{textAlign: "center"}}>Danh sách hợp đồng</h1>
+            <div>
+                <table style={{width: "100%"}}>
                     <thead>
                     <tr>
-                        <th>ID</th>
+                        <th>STT</th>
                         <th>Số hợp đồng</th>
                         <th>Ngày bắt đầu</th>
-                        <th>Ngày kết thúc </th>
+                        <th>Ngày kết thúc</th>
                         <th>Tiền cọc tước</th>
                         <th>Tổng tiền</th>
                     </tr>
                     </thead>
                     <tbody>
-                    {contracts.map(contract => (
-                        <tr key={contract.id}>
+                    {contracts.map((contract, index) => (
+                        <tr key={index}>
+                            <td>{index + 1}</td>
                             <td>{contract.contractNumber}</td>
                             <td>{contract.startDate}</td>
                             <td>{contract.endDate}</td>
@@ -34,4 +35,5 @@ function ContractList() {
         </div>
     )
 }
+
 export default ContractList

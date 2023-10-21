@@ -13,9 +13,9 @@ function App() {
     return (
         <>
             <Header/>
-            {/*<CustomerList/>*/}
+            <CustomerList/>
             {/*<ContractList/>*/}
-            <FacilityList/>
+            {/*<FacilityList/>*/}
             {/*<Page/>*/}
 
             <Footer/>

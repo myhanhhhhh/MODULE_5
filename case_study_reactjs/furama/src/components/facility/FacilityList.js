@@ -1,12 +1,12 @@
+import React from "react";
 import {getAll} from "../../service/facilityService";
 
 function FacilityList() {
     const facilities = getAll();
-
     return (
         <div className="row" style={{margin: "5% 12% 5% 12%", display: "flex"}}>
-            {facilities.map((facility) => (
-                <div key={facility.id} className="col-xl-4 col-sm-6 col-12"
+            {facilities.map((facility,index) => (
+                <div key={index} className="col-xl-4 col-sm-6 col-12"
                      style={{display: "flex", marginBottom: "3%"}}>
                     <div className="card" style={{width: "100%"}}>
                         <img src={facility.imageUrl} className="card-img-top" alt="..." style={{height: "120%"}}/>
