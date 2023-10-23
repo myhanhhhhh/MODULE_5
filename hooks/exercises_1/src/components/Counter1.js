@@ -1,6 +1,6 @@
 import {useIncrement} from "./Counter";
 
-export const Counter1 = ()=>{
+const Counter1 = ()=>{
     const [count1,setCount1] =useIncrement(1);
     const handleIncrement = ()=>{
         setCount1(1);
@@ -12,3 +12,4 @@ export const Counter1 = ()=>{
         </>
     )
 }
+export {Counter1}
