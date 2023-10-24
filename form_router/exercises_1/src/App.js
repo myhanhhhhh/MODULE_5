@@ -10,9 +10,7 @@ function App() {
     return (
         <div>
             <ContactForm/>
-            <ToastContainer>
-
-            </ToastContainer>
+            <ToastContainer></ToastContainer>
         </div>
     );
 }

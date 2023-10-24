@@ -21,7 +21,6 @@ function MedicalForm() {
         email: "",
         expression:[],
         touch:[]
-
     };
 
     const validateObject = {
@@ -51,20 +50,23 @@ function MedicalForm() {
             .matches(/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/, "Email không đúng format"),
 
     };
+
+    const handleFormSubmit = (values) => {
+        console.log(values);
+        toast("Submit thành công");
+    };
     return (
         <>
             <Formik
                 initialValues={initValue}
                 onSubmit={(values) => {
-                    console.log(values)
-                    toast("Submit thành công")
-                    // alert("Submit thành công")
+                   handleFormSubmit(values)
                 }}
                 validationSchema={Yup.object(validateObject)
                 }
             >
                 <div className='container'>
-                    <h1>Health Declaration</h1>
+                    <h1>Tờ khai y tế</h1>
                     <Form>
                         <div className='mb-3'>
                             <label htmlFor='Name' className='form-label'>Họ tên</label>

@@ -2,6 +2,7 @@ import React, {useEffect, useState} from "react";
 import * as Yup from "yup";
 import {ErrorMessage, Field, Form, Formik} from "formik";
 import {toast} from "react-toastify";
+
 function ContactForm() {
     const initValue = {
         name: "",
@@ -10,10 +11,11 @@ function ContactForm() {
         message: ""
     };
 
+
     const validateObject = {
         name: Yup.string()
             .required("Tên không được để trống")
-            .matches( /^[A-Za-z ]{3,100}$/, "Tên không đúng format"),
+            .matches(/^[A-Za-z ]{3,100}$/, "Tên không đúng format"),
         email: Yup.string()
             .required("Email không được để trống")
             .matches(/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/, "Email không đúng format"),
@@ -24,14 +26,18 @@ function ContactForm() {
             .required("Lời nhắn không được để trống")
             .matches(/^[A-Za-z ]{3,100}$/, "Lời nhắn không đúng format"),
     };
+
+    const handleFormSubmit = (values) => {
+        console.log(values);
+        toast("Submit thành công");
+    };
+
     return (
         <>
             <Formik
                 initialValues={initValue}
                 onSubmit={(values) => {
-                    console.log(values)
-                    // alert("Submit thành công")
-                    toast("Submit thành công")
+                    handleFormSubmit(values)
                 }}
                 validationSchema={Yup.object(validateObject)
                 }
