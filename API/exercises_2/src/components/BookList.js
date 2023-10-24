@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import async from "async";
-import * as BookService from "../../src/service/BookService" ;
+import * as bookService from "../service/bookService" ;
 import axios from "axios";
 import {NavLink} from "react-router-dom";
 import {Button, Modal} from "react-bootstrap";
@@ -19,7 +19,7 @@ export function BookList() {
     }, []);
 
     const display = async () => {
-        let response = await BookService.getALl()
+        let response = await bookService.getALl()
         setBooks(response);
     }
 
@@ -34,17 +34,16 @@ export function BookList() {
     };
 
     const deleteBook = async () => {
-        const status = await BookService.del(selectedBook);
-        setBooks(await BookService.getALl());
+        const status = await bookService.del(selectedBook);
+        console.log(status)
+        setBooks(await bookService.getALl());
         if (status === 200) {
             handleCloseModal()
             navigate("/");
             toast("OKE");
         } else {
             toast("FAIL")
-
         }
-
     };
 
 
@@ -93,7 +92,6 @@ function MyModal(props) {
     const handleDelete = () => {
         onDelete();
     };
-
     return (
         <>
             <Modal.Header closeButton>

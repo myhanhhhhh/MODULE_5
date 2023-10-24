@@ -3,7 +3,7 @@ import * as Yup from "yup";
 import {ErrorMessage, Field, Form, Formik} from "formik";
 import {toast} from "react-toastify";
 import axios, {create} from "axios";
-import * as BookService from "../../src/service/BookService" ;
+import * as bookService from "../service/bookService" ;
 import {NavLink, useNavigate, useParams} from "react-router-dom";
 import {date} from "yup";
 
@@ -14,7 +14,7 @@ function BookCreate() {
     const param = useParams();
 
     const getBook = async (id) => {
-        let response = await BookService.findById(id)
+        let response = await bookService.findById(id)
         setBooks(response);
     }
 
