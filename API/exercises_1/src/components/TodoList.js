@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from "react";
 import async from "async";
-import * as TodoService from "../../src/service/TodoService" ;
 import axios from "axios";
 import {NavLink} from "react-router-dom";
+import * as todoService from "../service/todoService" ;
 
 export function TodoList() {
     const [todos, setTodos] = useState([]);
@@ -11,7 +11,7 @@ export function TodoList() {
         display();
     }, []);
     const display = async () => {
-        let response = await TodoService.getALl()
+        let response = await todoService.getALl()
         setTodos(response);
     }
 

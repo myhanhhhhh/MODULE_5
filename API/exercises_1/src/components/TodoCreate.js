@@ -3,8 +3,8 @@ import * as Yup from "yup";
 import {ErrorMessage, Field, Form, Formik} from "formik";
 import {toast} from "react-toastify";
 import axios, {create} from "axios";
-import * as TodoService from "../../src/service/TodoService" ;
-import {useNavigate} from "react-router-dom";
+import * as todoService from "../service/todoService" ;
+import {NavLink, useNavigate} from "react-router-dom";
 import {date} from "yup";
 
 
@@ -15,7 +15,7 @@ function TodoCreate() {
     }, [])
 
     const createTodo = async (data) => {
-        const status = await TodoService.create(data);
+        const status = await todoService.create(data);
         console.log(status)
         if (status === 201) {
             navigate('/');
@@ -55,6 +55,7 @@ function TodoCreate() {
                             <Field type='text' name="title" className='form-control' id='title'/>
                             <ErrorMessage name="title" component="span" style={{color: "red"}}></ErrorMessage>
                         </div>
+                        <label htmlFor='studentPhone' className='form-label'>Completed</label>
                         <div className='mb-3'>
                             <div className="form-check form-check-inline">
                                 <Field className="form-check-input" type="radio" name="completed"
@@ -69,7 +70,10 @@ function TodoCreate() {
                                 <label className="form-check-label" htmlFor="inlineRadio2">No</label>
                             </div>
                         </div>
-                        <button type='submit' className='btn btn-primary'>Submit</button>
+                        <NavLink to="/" >
+                            <button className="btn btn-secondary">Cancel</button>
+                        </NavLink>
+                        <button style={{marginLeft:"10px"}} type='submit' className='btn btn-primary'>Submit</button>
                     </Form>
                 </div>
             </Formik>
