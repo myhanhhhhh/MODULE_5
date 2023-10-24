@@ -2,6 +2,7 @@ import React, {useEffect, useState} from "react";
 import async from "async";
 import * as TodoService from "../../src/service/TodoService" ;
 import axios from "axios";
+import {NavLink} from "react-router-dom";
 
 export function TodoList() {
     const [todos, setTodos] = useState([]);
@@ -17,6 +18,7 @@ export function TodoList() {
 
     return (
         <div>
+            <NavLink to="/create"><button className="btn btn-primary">Create</button></NavLink>
             <h1>Todo List</h1>
             <table className="table table-striped">
                 <thead>
