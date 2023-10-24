@@ -4,14 +4,17 @@ import TodoList from "./components/TodoList";
 import {Route, Routes} from "react-router-dom";
 import Todo from "./components/TodoList";
 import TodoCreate from "./components/TodoCreate";
+import {ToastContainer} from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
     return (
         <>
-        <Routes>
-            <Route path="/" element={<TodoList/>}/>
-            <Route path="/create" element={<TodoCreate/>}/>
-        </Routes>
+            <ToastContainer></ToastContainer>
+            <Routes>
+                <Route path="/" element={<TodoList/>}/>
+                <Route path="/create" element={<TodoCreate/>}/>
+            </Routes>
         </>
     );
 }
