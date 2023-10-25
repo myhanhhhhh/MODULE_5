@@ -1,13 +1,43 @@
-import React from "react";
-import {getAll} from "../../service/customerService";
+import React, {useEffect, useState} from "react";
+import * as customerService from "../../service/customerService"
+import {NavLink, Link} from "react-router-dom";
+import {DeleteCustomer} from "./CustomerDelete";
 
-function CustomerList() {
-    const customers = getAll();
+export function CustomerList() {
+    const [customers, setCustomers] = useState([]);
+    const [selectedCustomer, setSelectedCustomer] = useState(null);
+    const [showModal, setShowModal] = useState(false);
+
+    const display = async () => {
+        let response = await customerService.getAll()
+        setCustomers(response);
+    }
+
+    const handleModal = async (value) => {
+        setShowModal(true);
+        setSelectedCustomer(value);
+    }
+    const closeModal = async () => {
+        display()
+        setShowModal(false);
+    }
+
+
+    useEffect(() => {
+        display();
+    }, []);
+
+    console.log(selectedCustomer)
+    console.log(showModal)
+
     return (
         <div>
             <h1 style={{textAlign: "center"}}>Danh sách khách hàng</h1>
-            <div >
-                <table style={{width:"100%"}}>
+            <NavLink style={{marginLeft: "20px"}} to="/create">
+                <button className="btn btn-success">Thêm mới</button>
+            </NavLink>
+            <div className="container-fluid">
+                <table style={{width: "100%"}}>
                     <thead>
                     <tr>
                         <th>STT</th>
@@ -23,7 +53,7 @@ function CustomerList() {
                     </tr>
                     </thead>
                     <tbody>
-                    {customers.map((customer,index) => (
+                    {customers.map((customer, index) => (
                         <tr key={index}>
                             <td>{index + 1}</td>
                             <td>{customer.name}</td>
@@ -32,24 +62,27 @@ function CustomerList() {
                             <td>{customer.identity}</td>
                             <td>{customer.phoneNumber}</td>
                             <td>{customer.email}</td>
-                            <td>{customer.customerType}</td>
                             <td>{customer.address}</td>
+                            <td>{customer.customerType.name}</td>
                             <td>
-                                <a>
+                                <NavLink to={`/update/${customer.id}`}>
                                     <button className="btn btn-primary">Sửa</button>
-
-                                    <button  type="button" className="btn btn-danger ms-2" data-bs-toggle="modal"
-                                             data-bs-target="#exampleModal">
-                                        Xóa
-                                    </button>
-                                </a>
+                                </NavLink>
+                                <button className="btn btn-danger ms-2"
+                                        onClick={() => handleModal(customer)}>Xóa
+                                </button>
                             </td>
                         </tr>
                     ))}
                     </tbody>
                 </table>
+                <DeleteCustomer
+                    show={showModal}
+                    select={selectedCustomer}
+                    handleClose={closeModal}>
+                </DeleteCustomer>
             </div>
         </div>
     )
 }
-export default CustomerList
+

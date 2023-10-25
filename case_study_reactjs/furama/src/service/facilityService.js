@@ -41,5 +41,4 @@ const facilities = [
     return facilities;
 }
 
-console.log(facilities)
 export {getAll}

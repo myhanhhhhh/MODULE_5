@@ -15,10 +15,8 @@ function Footer() {
                         <div className="social-media" style={{marginTop: "3%"}}>
                             <h3>Kết nối với chúng tôi</h3>
                             <ul className="list-inline social-icons">
-                                <li className="list-inline-item"><a href="#" style={{color: "white"}}><i
-                                    className="fab fa-facebook">Facebook.com</i></a></li>
-                                <li className="list-inline-item"><a href="#" style={{color: "white"}} href=""><i
-                                    className="fab fa-instagram">Instagram.com.vn</i></a></li>
+                                <li className="list-inline-item"><a href="#"><i className="fab fa-facebook">Facebook.com</i></a></li>
+                                <li className="list-inline-item"><a href="#"><i className="fab fa-instagram">Instagram.com.vn</i></a></li>
                             </ul>
                         </div>
                     </div>

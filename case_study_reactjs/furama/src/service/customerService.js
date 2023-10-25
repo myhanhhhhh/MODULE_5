@@ -1,55 +1,68 @@
-const customerType = ["Thành viên","Bạc","Vàng", "Kim cương"]
-const customers = [
-    {
-        id: 1,
-        name: 'Nguyễn Dương',
-        birthday: '20/04/1995',
-        gender: 0,
-        identity: '20000109210',
-        phoneNumber: '0707600447',
-        email: 'nguyenduong@gmail.com',
-        customerType: customerType[0],
-        address: 'Quảng Nam'
-    },
-    {
-        id: 2,
-        name: 'Mỹ Hạnh',
-        birthday: '06/03/2001',
-        gender: 1,
-        identity: '20000109210',
-        phoneNumber: '0707600447',
-        email: 'myhanh@gmail.com',
-        customerType: customerType[1],
-        address: 'Quảng Nam'
-    },
-    {
-        id: 3,
-        name: 'Mỹ Liên',
-        birthday: '20/09/2000',
-        gender: 1,
-        identity: '20000109210',
-        phoneNumber: '0707600447',
-        email: 'mylien@gmail.com',
-        customerType: customerType[2],
-        address: 'Đà Nẵng',
-    },
-    {
-        id: 4,
-        name: 'Bảo Thiện',
-        birthday: '20/09/1998',
-        gender: 0,
-        identity: '20000109210',
-        phoneNumber: '0707600447',
-        email: 'baothien@gmail.com',
-        customerType: customerType[3],
-        address: 'Quảng Bình'
+import axios from "axios";
+
+const URL_CUSTOMER = "http://localhost:8080/customers";
+const URL_CUSTOMERTYPE = "http://localhost:8080/customerType";
+export const getAll = async () => {
+    try {
+        const response = await axios.get(URL_CUSTOMER);
+        console.log(response)
+        return response.data;
+    } catch (e) {
+        alert("không có dữ liệu")
     }
-];
-
-
-function getAll() {
-    return customers;
+}
+export const getCustomerType = async () => {
+    try {
+        const response = await axios.get(URL_CUSTOMERTYPE);
+        return response.data;
+    } catch (e) {
+        alert("không có dữ liệu")
+    }
 }
 
-console.log(customers)
-export {getAll} ;
+export const create = async (data) => {
+    try {
+        const response = await axios.post(URL_CUSTOMER, data);
+        return response
+    } catch (e) {
+        alert("Fail")
+    }
+}
+
+export const findById = async (id) => {
+    console.log(id)
+    try {
+
+        const response = await axios.get(URL_CUSTOMER + `/${id}`);
+        console.log(response)
+        return response.data
+    } catch (e) {
+        alert("Fail")
+    }
+}
+export const update = async (data) => {
+    try {
+        const response = await axios.put(URL_CUSTOMER + `/${data.id}`, data);
+        return response
+    } catch (e) {
+        alert("fail")
+    }
+}
+
+// export function del(xyz) {
+//     try {
+//         const response = axios.delete(URL_CUSTOMER + `/${xyz}`);
+//         return response;
+//     } catch (e) {
+//         alert("fail")
+//     }
+// }
+
+export const del = async (idCustomer) => {
+    try {
+        const response = await axios.delete(URL_CUSTOMER + `/${idCustomer}`);
+        return response;
+    } catch (e) {
+        alert("fail")
+    }
+}

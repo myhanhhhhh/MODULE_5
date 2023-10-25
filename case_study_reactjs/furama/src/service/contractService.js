@@ -33,10 +33,3 @@ const contracts = [
     }
 ];
 
-
-function getAll() {
-    return contracts;
-}
-
-console.log(contracts)
-export {getAll} ;

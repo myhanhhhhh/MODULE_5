@@ -1,0 +1,82 @@
+{
+  "customers": [
+    {
+      "id": 5,
+      "name": "hanh",
+      "birthday": "2023-10-05",
+      "gender": "1",
+      "identity": "200012342001",
+      "phoneNumber": "0766513500",
+      "email": "nguyenduong@gmail.com",
+      "customerType": {
+        "id": 5,
+        "name": "Member"
+      },
+      "address": "122 Dien Bien Phu"
+    },
+    {
+      "name": "hanh",
+      "birthday": "2023-10-05",
+      "gender": "1",
+      "identity": "200012342001",
+      "phoneNumber": "0766513500",
+      "email": "nguyenduong@gmail.com",
+      "customerType": {
+        "id": 4,
+        "name": "Silver"
+      },
+      "address": "122 Dien Bien Phu",
+      "id": 5
+    },
+    {
+      "name": "hanh",
+      "birthday": "2023-10-05",
+      "gender": "1",
+      "identity": "200012342001",
+      "phoneNumber": "0766513500",
+      "email": "nguyenduong@gmail.com",
+      "customerType": {
+        "id": 4,
+        "name": "Silver"
+      },
+      "address": "122 Dien Bien Phu",
+      "id": 5
+    },
+    {
+      "name": "hanh",
+      "birthday": "2023-10-05",
+      "gender": "1",
+      "identity": "200012342001",
+      "phoneNumber": "0766513500",
+      "email": "nguyenduong@gmail.com",
+      "customerType": {
+        "id": 4,
+        "name": "Silver"
+      },
+      "address": "122 Dien Bien Phu",
+      "id": 5
+    }
+  ],
+  "customerType": [
+    {
+      "id": 1,
+      "name": "Diamond"
+    },
+    {
+      "id": 2,
+      "name": "Platinum"
+    },
+    {
+      "id": 3,
+      "name": "Gold"
+    },
+    {
+      "id": 4,
+      "name": "Silver"
+    },
+    {
+      "id": 5,
+      "name": "Member"
+    }
+  ]
+}

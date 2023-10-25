@@ -11,8 +11,9 @@ ul, li, a {
     font-size: medium;
 }
 
-header nav {
+header {
     background-color: #065f56;
+    height: 58px;
 }
 .nav-item{
     color: #ff333e;
@@ -42,3 +43,19 @@ h1{
     text-align: center;
     margin-top: 40px;
 }
+#form{
+    background-color: #2F4F4F;
+    margin-left: 280px;
+    width: 90%;
+
+}
+/*#myDiv {*/
+/*    position: relative;*/
+/*}*/
+
+/*#myDiv a {*/
+/*    position: absolute;*/
+/*    top: 50px;*/
+/*    left: 100px;*/
+/*}*/
+

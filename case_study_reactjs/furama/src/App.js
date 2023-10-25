@@ -3,24 +3,25 @@ import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
 import Bander from './components/bander/Bander';
 import Page from './components/page/Page';
-import {getAll} from './service/customerService';
-import CustomerList from "./components/customer/CustomerList";
+import {CustomerList} from "./components/customer/CustomerList";
 import ContractList from "./components/contract/ContractList";
-import FacilityList from "./components/facility/FacilityList";
+import {ToastContainer} from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import {Route, Routes} from "react-router-dom";
+import CustomerCreate from "./components/customer/CustomerCreate";
+import CustomerUpdate from "./components/customer/CustomerUpdate";
 
 function App() {
-    const customers = getAll();
     return (
         <>
+            <ToastContainer></ToastContainer>
             <Header/>
-            <CustomerList/>
-            {/*<ContractList/>*/}
-            {/*<FacilityList/>*/}
-            {/*<Page/>*/}
-
+            <Routes>
+                <Route path="/" element={<CustomerList/>}/>
+                <Route path="/create" element={<CustomerCreate/>}/>
+                <Route path="/update/:id" element={<CustomerUpdate/>}/>
+            </Routes>
             <Footer/>
-
-            {/*<Footer/>*/}
         </>
     );
 }
