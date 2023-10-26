@@ -1,4 +1,4 @@
-import {NavLink} from "react-router-dom";
+import {Link, NavLink} from "react-router-dom";
 import React from "react";
 
 function Header() {
@@ -6,7 +6,7 @@ function Header() {
         <header>
             <nav className="navbar navbar-expand-lg navbar-light">
                 <div className="container" id="myDiv">
-                    <a style={{color: "white", fontSize: "27px"}} className="navbar-brand" href="index.html">#Furama</a>
+                    <a style={{color: "white", fontSize: "27px"}} className="navbar-brand" >#Furama</a>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
                             data-bs-target="#navbarNav"
                             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,14 +25,19 @@ function Header() {
                                     vụ</a>
                             </li>
                             <li className="nav-item">
-                                <NavLink style={{color: "white", textDecoration:"none"}} to="/">
-                                     Khách hàng
-                                </NavLink>
+                                <div style={{cursor:"pointer"}} className="nav-link">
+                                    <NavLink style={{color: "white", textDecoration: "none"}} to="/customers">
+                                        Khách hàng
+                                    </NavLink>
+                                </div>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link"
-                                   style={{color: "white", fontFamily: "Tahoma", fontSize: "medium"}} href="#">Hợp
-                                    đồng</a>
+                                <div style={{cursor:"pointer"}} className="nav-link">
+                                    <Link style={{color: "white", textDecoration: "none", marginLeft: "10px"}}
+                                             to="/contracts">
+                                        Hợp đồng
+                                    </Link>
+                                </div>
                             </li>
                         </ul>
                     </div>

@@ -17,7 +17,7 @@ function CustomerUpdate() {
     console.log(param.id)
 
     const getCustomer = async () => {
-        let response = await customerService.findById(param.id)
+        let response = await customerService.findById(param.id);
         setCustomers(response);
     }
 
@@ -30,10 +30,11 @@ function CustomerUpdate() {
             ...data,
             customerType: JSON.parse(data.customerType)
         }
+        data.gender = +data.gender
         console.log(newCustomer)
         const response = await customerService.update(newCustomer);
         if (response.status === 200) {
-            navigate('/');
+            navigate('/customers');
             toast("OKE");
         } else {
             toast.error("FAIL");
@@ -44,33 +45,20 @@ function CustomerUpdate() {
         getCustomer()
         getCustomerType()
     }, [param.id])
+
     const initValue =
         customers &&
-            {
-                id: customers.id,
-                name: customers.name,
-                birthday: customers.birthday,
-                gender: customers.gender,
-                identity: customers.identity,
-                phoneNumber: customers.phoneNumber,
-                email: customers.email,
-                customerType: JSON.stringify(customers.customerType),
-                address: customers.address
-            // }
-        //     :
-        // {
-        // name: "",
-        // birthday: "",
-        // gender: '0',
-        // identity: "",
-        // phoneNumber: "",
-        // email: "",
-        // customerType: JSON.stringify({
-        //     id: 5,
-        //     name: "Member"
-        // }),
-        // address: ""
-    };
+        {
+            id: customers.id,
+            name: customers.name,
+            birthday: customers.birthday,
+            gender: customers.gender,
+            identity: customers.identity,
+            phoneNumber: customers.phoneNumber,
+            email: customers.email,
+            customerType: JSON.stringify(customers.customerType),
+            address: customers.address
+        }
 
     if (!customers) {
         return null;
@@ -121,9 +109,8 @@ function CustomerUpdate() {
                                 <Field as="select" id="gender" name="gender" class="form-control"
                                        style={{width: "100%"}}>
                                     <option value="">-- Chọn giới tính --</option>
-                                    <option value="0">Nam</option>
-                                    <option value="1">Nữ</option>
-                                    <option value="2">LGBT</option>
+                                    <option value="0">Nữ</option>
+                                    <option value="1">Nam</option>
                                 </Field>
                             </div>
                         </div>
@@ -165,7 +152,7 @@ function CustomerUpdate() {
                             </div>
                         </div>
                         <div style={{marginTop: "20px"}}>
-                            <NavLink to="/">
+                            <NavLink to="/customers">
                                 <button className="btn btn-secondary">Huỷ</button>
                             </NavLink>
                             <button style={{marginLeft: "10px"}} type='submit' className='btn btn-primary'>Sửa

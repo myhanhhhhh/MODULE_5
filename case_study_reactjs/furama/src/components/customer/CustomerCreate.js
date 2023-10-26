@@ -20,13 +20,13 @@ function CustomerCreate() {
     const createCustomer = async (data) => {
         let newCustomer = {
             ...data,
-            customerType: JSON.parse(data.customerType)
+            customerType: JSON.parse(data.customerType),
 
         }
-        data.gender = +data.gender
+        data.gender = +data.gender;
         const response = await customerService.create(newCustomer);
         if (response.status === 201) {
-            navigate('/');
+            navigate('/customers');
             toast.success("OKE");
         } else {
             toast.error("FAIL");
@@ -40,7 +40,7 @@ function CustomerCreate() {
     const initValue = {
         name: "",
         birthday: "",
-        gender: "0",
+        gender: "",
         identity: "",
         phoneNumber: "",
         email: "",
@@ -100,9 +100,8 @@ function CustomerCreate() {
                                 <Field as="select" id="gender" name="gender" class="form-control"
                                        style={{width: "100%"}}>
                                     <option value="">-- Chọn giới tính --</option>
-                                    <option value="0">Nam</option>
-                                    <option value="1">Nữ</option>
-                                    <option value="2">LGBT</option>
+                                    <option value="0">Nữ</option>
+                                    <option value="1">Nam</option>
                                 </Field>
                             </div>
                         </div>
@@ -141,14 +140,15 @@ function CustomerCreate() {
                                         </option>
                                     ))}
                                 </Field>
-                                <ErrorMessage name="customerType" component="span" style={{color: "red"}}></ErrorMessage>
+                                <ErrorMessage name="customerType" component="span"
+                                              style={{color: "red"}}></ErrorMessage>
                             </div>
                         </div>
                         <div style={{marginTop: "20px"}}>
-                            <NavLink to="/">
+                            <NavLink to="/customers">
                                 <button className="btn btn-secondary">Huỷ</button>
                             </NavLink>
-                            <button style={{marginLeft: "10px"}} type='submit' className='btn btn-primary'>Submit
+                            <button style={{marginLeft: "10px"}} type='submit' className='btn btn-primary'>Thêm
                             </button>
                         </div>
 

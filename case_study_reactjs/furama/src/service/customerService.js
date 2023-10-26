@@ -2,13 +2,13 @@ import axios from "axios";
 
 const URL_CUSTOMER = "http://localhost:8080/customers";
 const URL_CUSTOMERTYPE = "http://localhost:8080/customerType";
-export const getAll = async () => {
+export const getAll = async (data) => {
     try {
-        const response = await axios.get(URL_CUSTOMER);
+        const response = await axios.get(URL_CUSTOMER + "?name_like=" + `${data}`);
         console.log(response)
         return response.data;
     } catch (e) {
-        alert("không có dữ liệu")
+        alert("Fail")
     }
 }
 export const getCustomerType = async () => {
@@ -16,7 +16,7 @@ export const getCustomerType = async () => {
         const response = await axios.get(URL_CUSTOMERTYPE);
         return response.data;
     } catch (e) {
-        alert("không có dữ liệu")
+        alert("Fail")
     }
 }
 
@@ -48,15 +48,6 @@ export const update = async (data) => {
         alert("fail")
     }
 }
-
-// export function del(xyz) {
-//     try {
-//         const response = axios.delete(URL_CUSTOMER + `/${xyz}`);
-//         return response;
-//     } catch (e) {
-//         alert("fail")
-//     }
-// }
 
 export const del = async (idCustomer) => {
     try {

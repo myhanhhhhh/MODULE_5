@@ -10,6 +10,8 @@ import "react-toastify/dist/ReactToastify.css";
 import {Route, Routes} from "react-router-dom";
 import CustomerCreate from "./components/customer/CustomerCreate";
 import CustomerUpdate from "./components/customer/CustomerUpdate";
+import ContractCreate from "./components/contract/ContractCreate";
+import ContractUpdate from "./components/contract/ContractUpdate";
 
 function App() {
     return (
@@ -17,9 +19,13 @@ function App() {
             <ToastContainer></ToastContainer>
             <Header/>
             <Routes>
-                <Route path="/" element={<CustomerList/>}/>
-                <Route path="/create" element={<CustomerCreate/>}/>
-                <Route path="/update/:id" element={<CustomerUpdate/>}/>
+                <Route path="/customers" element={<CustomerList/>}/>
+                <Route path="/customers/create" element={<CustomerCreate/>}/>
+                <Route path="/customers/update/:id" element={<CustomerUpdate/>}/>
+                <Route path="/contracts" element={<ContractList/>}/>
+                <Route path="/contracts/create" element={<ContractCreate/>}/>
+                <Route path="/contracts/update/:id" element={<ContractUpdate/>}/>
+
             </Routes>
             <Footer/>
         </>

@@ -1,60 +1,74 @@
 {
   "customers": [
     {
-      "id": 5,
-      "name": "hanh",
+      "id": 1,
+      "name": "Liên",
       "birthday": "2023-10-05",
-      "gender": "1",
+      "gender": 0,
       "identity": "200012342001",
       "phoneNumber": "0766513500",
       "email": "nguyenduong@gmail.com",
       "customerType": {
-        "id": 5,
+        "id": 3,
         "name": "Member"
       },
       "address": "122 Dien Bien Phu"
     },
     {
-      "name": "hanh",
+      "id": 2,
+      "name": "Thôi",
       "birthday": "2023-10-05",
-      "gender": "1",
+      "gender": 1,
       "identity": "200012342001",
       "phoneNumber": "0766513500",
       "email": "nguyenduong@gmail.com",
       "customerType": {
-        "id": 4,
-        "name": "Silver"
+        "id": 2,
+        "name": "Platinum"
       },
-      "address": "122 Dien Bien Phu",
-      "id": 5
+      "address": "122 Dien Bien Phu"
     },
     {
-      "name": "hanh",
+      "id": 3,
+      "name": "Hạnh",
       "birthday": "2023-10-05",
-      "gender": "1",
+      "gender": 0,
       "identity": "200012342001",
       "phoneNumber": "0766513500",
       "email": "nguyenduong@gmail.com",
       "customerType": {
-        "id": 4,
-        "name": "Silver"
+        "id": 2,
+        "name": "Gold"
       },
-      "address": "122 Dien Bien Phu",
-      "id": 5
+      "address": "122 Dien Bien Phu"
     },
     {
-      "name": "hanh",
+      "id": 4,
+      "name": "Dương",
       "birthday": "2023-10-05",
-      "gender": "1",
+      "gender": 1,
       "identity": "200012342001",
       "phoneNumber": "0766513500",
       "email": "nguyenduong@gmail.com",
       "customerType": {
-        "id": 4,
-        "name": "Silver"
+        "id": 2,
+        "name": "Diamond"
       },
-      "address": "122 Dien Bien Phu",
-      "id": 5
+      "address": "122 Dien Bien Phu"
+    },
+    {
+      "id": 5,
+      "name": "Sang",
+      "birthday": "2023-10-05",
+      "gender": 1,
+      "identity": "200012342001",
+      "phoneNumber": "0766513500",
+      "email": "nguyenduong@gmail.com",
+      "customerType": {
+        "id": 2,
+        "name": "Platinum"
+      },
+      "address": "122 Dien Bien Phu"
     }
   ],
   "customerType": [
@@ -77,6 +91,40 @@
     {
       "id": 5,
       "name": "Member"
+    }
+  ],
+  "contracts": [
+    {
+      "id": 2,
+      "contractNumber": "HD-001",
+      "startDate": "1999-11-10",
+      "endDate": "2000-10-20",
+      "deposit": 1009990,
+      "total": 19220000
+    },
+    {
+      "id": 3,
+      "contractNumber": "HD-001",
+      "startDate": "1999-11-10",
+      "endDate": "2000-10-20",
+      "deposit": 1009990,
+      "total": 19220000
+    },
+    {
+      "id": 4,
+      "contractNumber": "HD-001",
+      "startDate": "1999-11-10",
+      "endDate": "2000-10-20",
+      "deposit": 1009990,
+      "total": 19220000
+    },
+    {
+      "id": 5,
+      "contractNumber": "HD-001",
+      "startDate": "1999-11-10",
+      "endDate": "2000-10-20",
+      "deposit": 1009990,
+      "total": 19220000
     }
   ]
 }
