@@ -1,9 +1,9 @@
 import axios from "axios";
 
-const URL_CONTRACT = "http://localhost:8080/contracts";
-export const getAll = async () => {
+const URL_CONTRACT = "http://localhost:8081/contracts";
+export const getAll = async (data1, data2) => {
     try {
-        const response = await axios.get(URL_CONTRACT);
+        const response = await axios.get(URL_CONTRACT + "?contractNumber_like=" + data1 + "&startDate_like=" + data2);
         return response.data;
     } catch (e) {
         alert("Fail");
@@ -39,7 +39,7 @@ export const update = async (data) => {
 }
 export const del = async (contractId) => {
     console.log(`sang ga`)
-    console.log(contractId +`----------`)
+    console.log(contractId + `----------`)
     try {
         const res = await axios.delete(URL_CONTRACT + `/${contractId}`)
         return res;

@@ -1,19 +1,21 @@
-import {NavLink, useNavigate} from "react-router-dom";
-import React, {useEffect, useState} from "react";
-import *as contractService from "../../service/contractService";
+import React, {useState} from "react";
+import * as facilityService from "../../service/facilityService"
+import * as contractService from "../../service/contractService";
 import {toast} from "react-toastify";
 import * as Yup from "yup";
-import {ErrorMessage, Field, Formik, Form} from "formik";
+import {ErrorMessage, Field, Form, Formik} from "formik";
+import {NavLink, useNavigate} from "react-router-dom";
 
-
-function ContractCreate() {
+function FacilityCreate() {
+    const [villas, setVillas] = useState([]);
     const navigate = useNavigate();
 
-    const createContract = async (data) => {
-        const response = await contractService.create(data);
+    const createFacility = async (data) => {
+        const response = await facilityService.create(data);
         console.log(response);
         if (response.status === 201) {
-            navigate("/contracts")
+            navigate('')
+            // navigate("/contracts")
             toast.success("OKE^^")
         } else {
             toast.error("FAIL")
@@ -29,7 +31,7 @@ function ContractCreate() {
     const validateObject = {
         contractNumber: Yup.string()
             .required("Required")
-            .matches(/^HD-\d+$/,"phai bat dau HD-xxx"),
+            .matches(/^HD-\d+$/, "phai bat dau HD-xxx"),
         startDate: Yup.date()
             .required("Required"),
         endDate: Yup.date()
@@ -46,7 +48,7 @@ function ContractCreate() {
             <Formik
                 initialValues={initValue}
                 onSubmit={(values) => {
-                    createContract(values)
+                    createFacility(values)
                 }}
                 validationSchema={Yup.object(validateObject)
                 }
@@ -98,5 +100,4 @@ function ContractCreate() {
         </div>
     )
 }
-
-export default ContractCreate
+export default FacilityCreate;

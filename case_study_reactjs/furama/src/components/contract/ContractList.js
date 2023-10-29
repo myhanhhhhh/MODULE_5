@@ -7,8 +7,10 @@ function ContractList() {
     const [contracts, setContracts] = useState([]);
     const [selectContracts, setSelectContracts] = useState(null);
     const [showModal, setShowModal] = useState(false);
+    const [contractNumber, setContractNumber] = useState("");
+    const [startDate, setStartDate] = useState("");
     const display = async () => {
-        let response = await contractService.getAll()
+        let response = await contractService.getAll(contractNumber,startDate)
         setContracts(response);
     }
     const handleModal = async (value) => {
@@ -23,13 +25,17 @@ function ContractList() {
 
     useEffect(() => {
         display();
-    }, [])
+    }, [contractNumber,startDate])
     return (
-        <div>
+        <div className="container">
             <h1 style={{textAlign: "center"}}>Danh sách hợp đồng</h1>
             <NavLink style={{marginLeft: "20px"}} to="/contracts/create">
                 <button className="btn btn-success">Thêm mới</button>
             </NavLink>
+            <input style={{marginLeft: "1100px", height: "40px"}} onChange={(evt) => setContractNumber(evt.target.value)}
+                   placeholder="Nhập Số hợp đồng" type="text"/>
+            {/*<input style={{height: "40px"}} onChange={(evt) => setStartDate(evt.target.value)}*/}
+            {/*       placeholder="Nhập ngày bắt đầu " type="text"/>*/}
             <div className="container-fluid">
                 <table style={{width: "100%"}}>
                     <thead>

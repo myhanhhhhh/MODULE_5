@@ -9,7 +9,7 @@
       "phoneNumber": "0766513500",
       "email": "nguyenduong@gmail.com",
       "customerType": {
-        "id": 3,
+        "id": 5,
         "name": "Member"
       },
       "address": "122 Dien Bien Phu"
@@ -37,7 +37,7 @@
       "phoneNumber": "0766513500",
       "email": "nguyenduong@gmail.com",
       "customerType": {
-        "id": 2,
+        "id": 3,
         "name": "Gold"
       },
       "address": "122 Dien Bien Phu"
@@ -51,10 +51,10 @@
       "phoneNumber": "0766513500",
       "email": "nguyenduong@gmail.com",
       "customerType": {
-        "id": 2,
+        "id": 1,
         "name": "Diamond"
       },
-      "address": "122 Dien Bien Phu"
+      "address": "Quảng Nam"
     },
     {
       "id": 5,
@@ -69,6 +69,20 @@
         "name": "Platinum"
       },
       "address": "122 Dien Bien Phu"
+    },
+    {
+      "name": "Nguyễn Dương",
+      "birthday": "1995-04-20",
+      "gender": "1",
+      "identity": "200012342001",
+      "phoneNumber": "0707600447",
+      "email": "nguyenduong@gmail.com",
+      "customerType": {
+        "id": 1,
+        "name": "Diamond"
+      },
+      "address": "Quảng Nam",
+      "id": 7
     }
   ],
   "customerType": [
@@ -96,7 +110,7 @@
   "contracts": [
     {
       "id": 2,
-      "contractNumber": "HD-001",
+      "contractNumber": "HD-002",
       "startDate": "1999-11-10",
       "endDate": "2000-10-20",
       "deposit": 1009990,
@@ -112,7 +126,7 @@
     },
     {
       "id": 4,
-      "contractNumber": "HD-001",
+      "contractNumber": "HD-012",
       "startDate": "1999-11-10",
       "endDate": "2000-10-20",
       "deposit": 1009990,
@@ -120,11 +134,135 @@
     },
     {
       "id": 5,
-      "contractNumber": "HD-001",
+      "contractNumber": "HD-002",
       "startDate": "1999-11-10",
       "endDate": "2000-10-20",
       "deposit": 1009990,
       "total": 19220000
+    },
+    {
+      "contractNumber": "HD-111",
+      "startDate": "2023-10-10",
+      "endDate": "2023-10-20",
+      "deposit": 2300000,
+      "total": 233300001,
+      "id": 6
+    }
+  ],
+  "typeRent": [
+    {
+      "id": 1,
+      "name": "năm"
+    },
+    {
+      "id": 2,
+      "name": "tháng"
+    },
+    {
+      "id": 3,
+      "name": "ngày"
+    },
+    {
+      "id": 4,
+      "name": "giờ"
+    }
+  ],
+  "villas": [
+    {
+      "id": 2,
+      "name": "GARDEN SUPERIOR",
+      "area": 40,
+      "cost": 2000000,
+      "capacity": 2,
+      "typeRent": {
+        "id": 1,
+        "name": "năm"
+      },
+      "image": "https://khachsandanang.info/wp-content/uploads/2015/03/48-1.jpg",
+      "standard": "deluxe",
+      "description": "aaaaaaa",
+      "poolArea": 20,
+      "floor": 1
+    },
+    {
+      "id": 3,
+      "name": "GARDEN SUPERIOR",
+      "area": 40,
+      "cost": 2000000,
+      "capacity": 2,
+      "typeRent": {
+        "id": 1,
+        "name": "năm"
+      },
+      "image": "https://khachsandanang.info/wp-content/uploads/2015/03/48-1.jpg",
+      "standard": "deluxe",
+      "description": "aaaaaaa",
+      "poolArea": 20,
+      "floor": 1
+    },
+    {
+      "id": 4,
+      "name": "GARDEN SUPERIOR",
+      "area": 40,
+      "cost": 2000000,
+      "capacity": 2,
+      "typeRent": {
+        "id": 1,
+        "name": "năm"
+      },
+      "image": "https://khachsandanang.info/wp-content/uploads/2015/03/48-1.jpg",
+      "standard": "deluxe",
+      "description": "aaaaaaa",
+      "poolArea": 20,
+      "floor": 1
+    },
+    {
+      "id": 5,
+      "name": "OCCEAN VILLA",
+      "area": 30,
+      "cost": 2000000,
+      "capacity": 2,
+      "typeRent": {
+        "id": 3,
+        "name": "ngày"
+      },
+      "image": "https://khachsandanang.info/wp-content/uploads/2015/03/48-1.jpg",
+      "standard": "Vip",
+      "description": "Rất là đẹp nha",
+      "poolArea": 0,
+      "floor": 0
+    },
+    {
+      "id": 6,
+      "name": "BEACH VILLA",
+      "area": 30,
+      "cost": 2000000,
+      "capacity": 2,
+      "typeRent": {
+        "id": 3,
+        "name": "ngày"
+      },
+      "image": "https://khachsandanang.info/wp-content/uploads/2015/03/48-1.jpg",
+      "standard": "Vip",
+      "description": "Rất là đẹp nha",
+      "poolArea": 0,
+      "floor": 0
+    },
+    {
+      "id": 7,
+      "name": "SEA VILLA",
+      "area": 30,
+      "cost": 2000000,
+      "capacity": 2,
+      "typeRent": {
+        "id": 3,
+        "name": "ngày"
+      },
+      "image": "https://khachsandanang.info/wp-content/uploads/2015/03/48-1.jpg",
+      "standard": "Vip",
+      "description": "Rất là đẹp nha",
+      "poolArea": 0,
+      "floor": 0
     }
   ]
 }

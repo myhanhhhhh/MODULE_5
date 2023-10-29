@@ -22,12 +22,13 @@ function DeleteContract({show, select, handleClose}) {
                         <div className="modal-dialog">
                             <div className="modal-content">
                                 <div className="modal-header">
-                                    <h5 className="modal-title">Confirm Deletion</h5>
+                                    <h3 className="modal-title">Xác nhận xoá</h3>
                                     <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"
                                             onClick={handleClose}></button>
                                 </div>
                                 <div className="modal-body">
-                                    <p>Do you want to delete {select.name}</p>
+                                    <p>Bạn có muốn xoá hợp đồng <b style={{color:"red", }}>{select.contractNumber} </b>  không ?</p>
+                                    <p style={{color: "red"}}>Lưu ý: Hành động này không thể hoàn tác!</p>
                                 </div>
                                 <div className="modal-footer">
                                     <button type="button" className="btn btn-secondary" data-bs-dismiss="modal"

@@ -48,7 +48,8 @@ function ContractUpdate() {
 
     const validateObject = {
         contractNumber: Yup.string()
-            .required("Required"),
+            .required("Required")
+            .matches(/^HD-\d+$/,"phai bat dau HD-xxx"),
         startDate: Yup.date()
             .required("Required"),
         endDate: Yup.date()
@@ -79,32 +80,32 @@ function ContractUpdate() {
                     <h1 className="mb-4">Sửa thông tin hợp đồng</h1>
                     <Form>
                         <div className='mb-3'>
-                            <label htmlFor='studentPhone' className='form-label'>Số hợp đồng<span
-                                style={{color: "red"}}>*</span>:</label>
+                            <b htmlFor='studentPhone' className='form-label'>Số hợp đồng<span
+                                style={{color: "red"}}>*</span>:</b>
                             <Field type='text' name="contractNumber" className='form-control' id='contractNumber'/>
                             <ErrorMessage name="contractNumber" component="span" style={{color: "red"}}></ErrorMessage>
                         </div>
                         <div className='mb-3'>
-                            <label htmlFor='studentPhone' className='form-label'>Ngày bắt đầu<span
-                                style={{color: "red"}}>*</span>:</label>
+                            <b htmlFor='studentPhone' className='form-label'>Ngày bắt đầu<span
+                                style={{color: "red"}}>*</span>:</b>
                             <Field type='date' name="startDate" className='form-control' id='startDate'/>
                             <ErrorMessage name="startDate" component="span" style={{color: "red"}}></ErrorMessage>
                         </div>
                         <div className='mb-3'>
-                            <label htmlFor='studentPhone' className='form-label'>Ngày kết thúc <span
-                                style={{color: "red"}}>*</span>:</label>
+                            <b htmlFor='studentPhone' className='form-label'>Ngày kết thúc <span
+                                style={{color: "red"}}>*</span>:</b>
                             <Field type='date' name="endDate" className='form-control' id='endDate'/>
                             <ErrorMessage name="endDate" component="span" style={{color: "red"}}></ErrorMessage>
                         </div>
                         <div className='mb-3'>
-                            <label htmlFor='studentPhone' className='form-label'>Tiền cọc tước <span
-                                style={{color: "red"}}>*</span>:</label>
+                            <b htmlFor='studentPhone' className='form-label'>Tiền cọc tước <span
+                                style={{color: "red"}}>*</span>:</b>
                             <Field type='number' name="deposit" className='form-control' id='deposit'/>
                             <ErrorMessage name="deposit" component="span" style={{color: "red"}}></ErrorMessage>
                         </div>
                         <div className='mb-3'>
-                            <label htmlFor='studentPhone' className='form-label'>Tổng tiền <span
-                                style={{color: "red"}}>*</span>:</label>
+                            <b htmlFor='studentPhone' className='form-label'>Tổng tiền <span
+                                style={{color: "red"}}>*</span>:</b>
                             <Field type='number' name="total" className='form-control' id='total'/>
                             <ErrorMessage name="total" component="span" style={{color: "red"}}></ErrorMessage>
                         </div>

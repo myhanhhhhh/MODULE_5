@@ -12,6 +12,8 @@ import CustomerCreate from "./components/customer/CustomerCreate";
 import CustomerUpdate from "./components/customer/CustomerUpdate";
 import ContractCreate from "./components/contract/ContractCreate";
 import ContractUpdate from "./components/contract/ContractUpdate";
+import FacilityList from "./components/facility/FacilityList";
+import FacilityCreate from "./components/facility/FacilityCreate";
 
 function App() {
     return (
@@ -25,6 +27,8 @@ function App() {
                 <Route path="/contracts" element={<ContractList/>}/>
                 <Route path="/contracts/create" element={<ContractCreate/>}/>
                 <Route path="/contracts/update/:id" element={<ContractUpdate/>}/>
+                <Route path="/villas" element={<FacilityList/>}/>
+                <Route path="/villas/create" element={<FacilityCreate/>}/>
 
             </Routes>
             <Footer/>

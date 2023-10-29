@@ -1,10 +1,11 @@
 import {toast} from "react-toastify";
-import * as customerService from "../../service/customerService"
+import * as facilityService from "../../service/facilityService"
 
-export function DeleteCustomer({show, select, handleClose}) {
-    const deleteCustomer = async (idCustomer) => {
-        console.log(idCustomer)
-        const response = await customerService.del(idCustomer)
+export function DeleteFacility({show, select, handleClose}) {
+    const deleteFacility = async (id) => {
+        console.log(id)
+        const response = await facilityService.del(id)
+        console.log(response)
         if (response.status === 200) {
             toast.success("OKE^^")
             handleClose()
@@ -29,7 +30,7 @@ export function DeleteCustomer({show, select, handleClose}) {
                                             onClick={handleClose}></button>
                                 </div>
                                 <div className="modal-body">
-                                    <p>Bạn có muốn xoá khách hàng <b style={{color:"red", }}>{select.name} </b>  không ?</p>
+                                    <p>Bạn có muốn xoá dich vu <b style={{color:"red", }}>{select.name} </b>  không ?</p>
                                     <p style={{color: "red"}}>Lưu ý: Hành động này không thể hoàn tác!</p>
                                 </div>
                                 <div className="modal-footer">
@@ -37,7 +38,7 @@ export function DeleteCustomer({show, select, handleClose}) {
                                             onClick={handleClose}>Close
                                     </button>
                                     <button type="button" className="btn btn-primary"
-                                            onClick={() => deleteCustomer(select.id)}>Delete
+                                            onClick={() => deleteFacility(select.id)}>Delete
                                     </button>
                                 </div>
                             </div>

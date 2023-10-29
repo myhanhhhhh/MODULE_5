@@ -6,12 +6,9 @@ import axios from "axios";
 import * as customerService from "../../service/customerService"
 import {NavLink, useNavigate} from "react-router-dom";
 import {date} from "yup";
-
-
-function CustomerCreate() {
+ function CustomerCreate() {
     const navigate = useNavigate();
     const [customerTypes, setCustomerTypes] = useState([])
-
 
     const getCustomerType = async () => {
         setCustomerTypes(await customerService.getCustomerType());
@@ -26,6 +23,7 @@ function CustomerCreate() {
         data.gender = +data.gender;
         const response = await customerService.create(newCustomer);
         if (response.status === 201) {
+            // setCustomerList((prevList) => [newCustomer, ...prevList]);
             navigate('/customers');
             toast.success("OKE");
         } else {
@@ -59,6 +57,8 @@ function CustomerCreate() {
         identity: Yup.string()
             .required("Required")
             .matches(/^\d{9}$|^\d{12}$/, "Số CCCD phải 9 hoặc 12 số!"),
+        gender: Yup.number()
+            .required("Required"),
         phoneNumber: Yup.string()
             .required("Required")
             .matches(/^(0|\+84)\d{9,10}$/, "SDT không đúng format"),
@@ -83,19 +83,19 @@ function CustomerCreate() {
                     <h1 className="mb-4">Thêm mới khách hàng</h1>
                     <Form>
                         <div className='mb-3'>
-                            <label htmlFor='studentPhone' className='form-label'>Ten<span
-                                style={{color: "red"}}>*</span>:</label>
+                            <b htmlFor='studentPhone' className='form-label'>Ten<span
+                                style={{color: "red"}}>*</span>:</b>
                             <Field type='text' name="name" className='form-control' id='name'/>
                             <ErrorMessage name="name" component="span" style={{color: "red"}}></ErrorMessage>
                         </div>
                         <div className='mb-3'>
-                            <label htmlFor='studentPhone' className='form-label'>Ngay sinh<span
-                                style={{color: "red"}}>*</span>:</label>
+                            <b htmlFor='studentPhone' className='form-label'>Ngay sinh<span
+                                style={{color: "red"}}>*</span>:</b>
                             <Field type='date' name="birthday" className='form-control' id='birthday'/>
                             <ErrorMessage name="birthday" component="span" style={{color: "red"}}></ErrorMessage>
                         </div>
                         <div className="form-group">
-                            <label className="form-label" htmlFor="gender">Giới tính:</label>
+                            <b className="form-label" htmlFor="gender">Giới tính:</b>
                             <div>
                                 <Field as="select" id="gender" name="gender" class="form-control"
                                        style={{width: "100%"}}>
@@ -103,34 +103,35 @@ function CustomerCreate() {
                                     <option value="0">Nữ</option>
                                     <option value="1">Nam</option>
                                 </Field>
+                                <ErrorMessage name="gender" component="span" style={{color: "red"}}></ErrorMessage>
                             </div>
                         </div>
                         <div className='mb-3'>
-                            <label htmlFor='studentPhone' className='form-label'>CCCD<span
-                                style={{color: "red"}}>*</span>:</label>
+                            <b htmlFor='studentPhone' className='form-label'>CCCD<span
+                                style={{color: "red"}}>*</span>:</b>
                             <Field type='text' name="identity" className='form-control' id='identity'/>
                             <ErrorMessage name="identity" component="span" style={{color: "red"}}></ErrorMessage>
                         </div>
                         <div className='mb-3'>
-                            <label htmlFor='studentPhone' className='form-label'>So dien thoai<span
-                                style={{color: "red"}}>*</span>:</label>
+                            <b htmlFor='studentPhone' className='form-label'>So dien thoai<span
+                                style={{color: "red"}}>*</span>:</b>
                             <Field type='text' name="phoneNumber" className='form-control' id='phoneNumber'/>
                             <ErrorMessage name="phoneNumber" component="span" style={{color: "red"}}></ErrorMessage>
                         </div>
                         <div className='mb-3'>
-                            <label htmlFor='studentPhone' className='form-label'>Email<span
-                                style={{color: "red"}}>*</span>:</label>
+                            <b htmlFor='studentPhone' className='form-label'>Email<span
+                                style={{color: "red"}}>*</span>:</b>
                             <Field type='text' name="email" className='form-control' id='email'/>
                             <ErrorMessage name="email" component="span" style={{color: "red"}}></ErrorMessage>
                         </div>
                         <div className='mb-3'>
-                            <label htmlFor='studentPhone' className='form-label'>Dia chi<span
-                                style={{color: "red"}}>*</span>:</label>
+                            <b htmlFor='studentPhone' className='form-label'>Dia chi<span
+                                style={{color: "red"}}>*</span>:</b>
                             <Field type='text' name="address" className='form-control' id='address'/>
                             <ErrorMessage name="address" component="span" style={{color: "red"}}></ErrorMessage>
                         </div>
                         <div className="mb-3">
-                            <label className="form-label" htmlFor="customerType">Loại khách:</label>
+                            <b className="form-label" htmlFor="customerType">Loại khách:</b>
                             <div>
                                 <Field as="select" id="customerType" name="customerType" className="form-control"
                                        style={{width: "100%"}}>
@@ -158,5 +159,5 @@ function CustomerCreate() {
         </>
     )
 }
-
 export default CustomerCreate
+

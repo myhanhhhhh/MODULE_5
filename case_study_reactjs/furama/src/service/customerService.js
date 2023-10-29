@@ -1,10 +1,10 @@
 import axios from "axios";
 
-const URL_CUSTOMER = "http://localhost:8080/customers";
-const URL_CUSTOMERTYPE = "http://localhost:8080/customerType";
-export const getAll = async (data) => {
+const URL_CUSTOMER = "http://localhost:8081/customers";
+const URL_CUSTOMERTYPE = "http://localhost:8081/customerType";
+export const getAll = async (data, type) => {
     try {
-        const response = await axios.get(URL_CUSTOMER + "?name_like=" + `${data}`);
+        const response = await axios.get(URL_CUSTOMER + "?name_like=" + `${data}` + "&customerType.name_like=" + `${type}`+ "&_sort=id&_order=desc");
         console.log(response)
         return response.data;
     } catch (e) {

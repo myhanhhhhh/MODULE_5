@@ -2,8 +2,14 @@ footer {
     background-color: #065f56;
     color: white;
     margin-top: 220px;
+    /*position: fixed;*/
+    bottom: 0;
+
 }
 
+.footer-bottom p{
+    margin: 0;
+}
 
 ul, li, a {
     color: white;

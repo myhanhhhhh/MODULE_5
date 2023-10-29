@@ -9,12 +9,12 @@ import {date} from "yup";
 
 
 function CustomerUpdate() {
-    const [customers, setCustomers] = useState(null);
+    const [customers, setCustomers] = useState();
     const [customerTypes, setCustomerTypes] = useState([]);
     const navigate = useNavigate();
     const param = useParams();// lấy value trên url
-    console.log(param)
-    console.log(param.id)
+    // console.log(param)
+    // console.log(param.id)
 
     const getCustomer = async () => {
         let response = await customerService.findById(param.id);
@@ -35,7 +35,7 @@ function CustomerUpdate() {
         const response = await customerService.update(newCustomer);
         if (response.status === 200) {
             navigate('/customers');
-            toast("OKE");
+            toast.success("OKE");
         } else {
             toast.error("FAIL");
         }
@@ -44,7 +44,7 @@ function CustomerUpdate() {
     useEffect(() => {
         getCustomer()
         getCustomerType()
-    }, [param.id])
+    }, [])
 
     const initValue =
         customers &&
@@ -69,6 +69,8 @@ function CustomerUpdate() {
         identity: Yup.string()
             .required("Required")
             .matches(/^\d{9}$|^\d{12}$/, "Số CCCD phải 9 hoặc 12 số!"),
+        gender: Yup.number()
+            .required("Required"),
         phoneNumber: Yup.string()
             .required("Required")
             .matches(/^(0|\+84)\d{9,10}$/, "SDT không đúng format"),
@@ -76,7 +78,9 @@ function CustomerUpdate() {
             .required("Required")
             .matches(/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/, "Email không đúng format"),
         address: Yup.string()
-            .required("Required")
+            .required("Required"),
+        customerType: Yup.string()
+            .required("Required"),
     };
     return (
         <>
@@ -93,18 +97,18 @@ function CustomerUpdate() {
                     <h1 className="mb-4">Sửa thông tin khách hàng</h1>
                     <Form>
                         <div className='mb-3'>
-                            <label htmlFor='studentPhone' className='form-label'>Ten<span
-                                style={{color: "red"}}>*</span>:</label>
+                            <b htmlFor='studentPhone' className='form-label'>Ten<span
+                                style={{color: "red"}}>*</span>:</b>
                             <Field type='text' name="name" className='form-control' id='name'/>
                             <ErrorMessage name="name" component="span" style={{color: "red"}}></ErrorMessage>
                         </div>
                         <div className='mb-3'>
-                            <label htmlFor='studentPhone' className='form-label'>Ngay sinh:</label>
+                            <b htmlFor='studentPhone' className='form-label'>Ngay sinh:</b>
                             <Field type='date' name="birthday" className='form-control' id='birthday'/>
                             <ErrorMessage name="birthday" component="span" style={{color: "red"}}></ErrorMessage>
                         </div>
                         <div className="form-group">
-                            <label className="form-label" htmlFor="gender">Giới tính:</label>
+                            <b className="form-label" htmlFor="gender">Giới tính:</b>
                             <div>
                                 <Field as="select" id="gender" name="gender" class="form-control"
                                        style={{width: "100%"}}>
@@ -112,34 +116,35 @@ function CustomerUpdate() {
                                     <option value="0">Nữ</option>
                                     <option value="1">Nam</option>
                                 </Field>
+                                <ErrorMessage name="gender" component="span" style={{color: "red"}}></ErrorMessage>
                             </div>
                         </div>
                         <div className='mb-3'>
-                            <label htmlFor='studentPhone' className='form-label'>CCCD<span
-                                style={{color: "red"}}>*</span>:</label>
+                            <b htmlFor='studentPhone' className='form-label'>CCCD<span
+                                style={{color: "red"}}>*</span>:</b>
                             <Field type='text' name="identity" className='form-control' id='identity'/>
                             <ErrorMessage name="identity" component="span" style={{color: "red"}}></ErrorMessage>
                         </div>
                         <div className='mb-3'>
-                            <label htmlFor='studentPhone' className='form-label'>So dien thoai<span
-                                style={{color: "red"}}>*</span>:</label>
+                            <b htmlFor='studentPhone' className='form-label'>So dien thoai<span
+                                style={{color: "red"}}>*</span>:</b>
                             <Field type='text' name="phoneNumber" className='form-control' id='phoneNumber'/>
                             <ErrorMessage name="phoneNumber" component="span" style={{color: "red"}}></ErrorMessage>
                         </div>
                         <div className='mb-3'>
-                            <label htmlFor='studentPhone' className='form-label'>Email<span
-                                style={{color: "red"}}>*</span>:</label>
+                            <b htmlFor='studentPhone' className='form-label'>Email<span
+                                style={{color: "red"}}>*</span>:</b>
                             <Field type='text' name="email" className='form-control' id='email'/>
                             <ErrorMessage name="email" component="span" style={{color: "red"}}></ErrorMessage>
                         </div>
                         <div className='mb-3'>
-                            <label htmlFor='studentPhone' className='form-label'>Dia chi<span
-                                style={{color: "red"}}>*</span>:</label>
+                            <b htmlFor='studentPhone' className='form-label'>Dia chi<span
+                                style={{color: "red"}}>*</span>:</b>
                             <Field type='text' name="address" className='form-control' id='address'/>
                             <ErrorMessage name="address" component="span" style={{color: "red"}}></ErrorMessage>
                         </div>
                         <div className="mb-3">
-                            <label className="form-label" htmlFor="customerType">Loại khách:</label>
+                            <b className="form-label" htmlFor="customerType">Loại khách:</b>
                             <div>
                                 <Field as="select" id="customerType" name="customerType" className="form-control"
                                        style={{width: "100%"}}>
