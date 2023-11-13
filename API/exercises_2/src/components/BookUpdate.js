@@ -19,7 +19,7 @@ function BookCreate() {
     }
 
     const updateBook = async (data) => {
-        const status = await BookService.update(data);
+        const status = await bookService.update(data);
         console.log(status)
         if (status === 200) {
             navigate('/');

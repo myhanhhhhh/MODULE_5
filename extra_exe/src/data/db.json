@@ -1,0 +1,82 @@
+{
+  "goods": [
+    {
+      "id": 2,
+      "goodsCode": "MHH-0002",
+      "name": "Khoai tây",
+      "unit": "kg",
+      "price": "10000",
+      "goodsType": {
+        "id": 2,
+        "name": "Củ"
+      },
+      "time": "2023-10-10"
+    },
+    {
+      "id": 3,
+      "goodsCode": "MHH-0003",
+      "name": "Rau",
+      "unit": "Bó",
+      "price": "12000",
+      "goodsType": {
+        "id": 1,
+        "name": "Rau"
+      },
+      "time": "2023-10-10"
+    },
+    {
+      "id": 4,
+      "goodsCode": "MHH-0004",
+      "name": "Cà rốt",
+      "unit": "kg",
+      "price": "15000",
+      "goodsType": {
+        "id": 2,
+        "name": "Củ"
+      },
+      "time": "2023-10-10"
+    },
+    {
+      "id": 5,
+      "goodsCode": "MHH-0005",
+      "name": "Rau muống",
+      "unit": "Bó",
+      "price": "20000",
+      "goodsType": {
+        "id": 1,
+        "name": "Rau"
+      },
+      "time": "2023-10-10"
+    },
+    {
+      "id": 6,
+      "goodsCode": "MHH-1120",
+      "name": "Nguyễn Dương",
+      "unit": "Bó",
+      "price": "120000",
+      "goodsType": {
+        "id": 2,
+        "name": "Củ"
+      },
+      "time": "2023-10-12"
+    }
+  ],
+  "goodsTypes": [
+    {
+      "id": 1,
+      "name": "Rau"
+    },
+    {
+      "id": 2,
+      "name": "Củ"
+    },
+    {
+      "id": 3,
+      "name": "Quả"
+    },
+    {
+      "id": 4,
+      "name": "Hoa"
+    }
+  ]
+}

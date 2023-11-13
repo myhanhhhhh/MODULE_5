@@ -1,6 +1,5 @@
 import React, {useState} from "react";
 import * as facilityService from "../../service/facilityService"
-import * as contractService from "../../service/contractService";
 import {toast} from "react-toastify";
 import * as Yup from "yup";
 import {ErrorMessage, Field, Form, Formik} from "formik";
@@ -15,7 +14,7 @@ function FacilityCreate() {
         console.log(response);
         if (response.status === 201) {
             navigate('')
-            // navigate("/contracts")
+            navigate("/contracts")
             toast.success("OKE^^")
         } else {
             toast.error("FAIL")

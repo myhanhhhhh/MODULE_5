@@ -34,8 +34,6 @@ function ContractList() {
             </NavLink>
             <input style={{marginLeft: "1100px", height: "40px"}} onChange={(evt) => setContractNumber(evt.target.value)}
                    placeholder="Nhập Số hợp đồng" type="text"/>
-            {/*<input style={{height: "40px"}} onChange={(evt) => setStartDate(evt.target.value)}*/}
-            {/*       placeholder="Nhập ngày bắt đầu " type="text"/>*/}
             <div className="container-fluid">
                 <table style={{width: "100%"}}>
                     <thead>

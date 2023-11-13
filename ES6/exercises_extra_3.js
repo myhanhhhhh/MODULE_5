@@ -15,6 +15,5 @@ const student2 = {
     gender: 'male',
     english: "English"
 };
-
 getInfo(student1);
 getInfo(student2);

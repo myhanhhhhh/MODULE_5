@@ -4,7 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="502a3751-4a81-456c-87d9-1ed2a885bfee" name="Changes" comment="" />
+    <list default="true" id="502a3751-4a81-456c-87d9-1ed2a885bfee" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../case_study_reactjs/furama/src/components/customer/CustomerCreate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../case_study_reactjs/furama/src/components/customer/CustomerUpdate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../API/exercises_2/src/components/BookList.js" beforeDir="false" afterPath="$PROJECT_DIR$/../API/exercises_2/src/components/BookList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../API/exercises_2/src/components/BookUpdate.js" beforeDir="false" afterPath="$PROJECT_DIR$/../API/exercises_2/src/components/BookUpdate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../API/exercises_2/src/data/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/../API/exercises_2/src/data/db.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises.js" beforeDir="false" afterPath="$PROJECT_DIR$/exercises.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises_extra_3.js" beforeDir="false" afterPath="$PROJECT_DIR$/exercises_extra_3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../case_study_reactjs/furama/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study_reactjs/furama/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../case_study_reactjs/furama/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study_reactjs/furama/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../case_study_reactjs/furama/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study_reactjs/furama/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../case_study_reactjs/furama/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study_reactjs/furama/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../case_study_reactjs/furama/src/components/customer/CustomerList.js" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study_reactjs/furama/src/components/customer/CustomerList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../case_study_reactjs/furama/src/components/facility/FacilityCreate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../case_study_reactjs/furama/src/components/facility/FacilityList.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../case_study_reactjs/furama/src/components/footer/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study_reactjs/furama/src/components/footer/Footer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../case_study_reactjs/furama/src/components/header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study_reactjs/furama/src/components/header/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../case_study_reactjs/furama/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study_reactjs/furama/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../case_study_reactjs/furama/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study_reactjs/furama/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../case_study_reactjs/furama/src/service/contractService.js" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study_reactjs/furama/src/service/contractService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../case_study_reactjs/furama/src/service/customerService.js" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study_reactjs/furama/src/service/customerService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../case_study_reactjs/furama/src/service/facilityService.js" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study_reactjs/furama/src/service/facilityService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../component/exercises_1/src/components/StudentInfoComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/../component/exercises_1/src/components/StudentInfoComponent.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,6 +44,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 5
+}]]></component>
   <component name="ProjectId" id="2Ws9dIMF9aubxqiw2xtPttAkXD8" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -31,7 +57,7 @@
     "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "<unknown>",
+    "git-widget-placeholder": "main",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -49,6 +75,7 @@
       <option name="presentableId" value="Default" />
       <updated>1697510505830</updated>
       <workItem from="1697510506859" duration="481000" />
+      <workItem from="1698218532319" duration="32000" />
     </task>
     <servers />
   </component>

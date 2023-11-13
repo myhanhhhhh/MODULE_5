@@ -25,16 +25,16 @@ let courses = [
         rating: 3.5,
     },
 ];
-// Task1
+// Task 1
 const rating = courses.filter(rate => rate.rating >= 4);
 
-// Task2
+// Task 2
 const rating1 = courses.filter(rate => rate.rating < 4)
     .map(rate => `<${rate.id}> - <${rate.title}> - <${rate.rating}>`);
 console.log(rating);
 console.log(rating1);
 
-// Task3
+// Task 3
 let addedCourses = [
     {
         id: 6,

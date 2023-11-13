@@ -16,6 +16,11 @@ function CustomerUpdate() {
     // console.log(param)
     // console.log(param.id)
 
+    useEffect(() => {
+        getCustomer()
+        getCustomerType()
+    }, [])
+
     const getCustomer = async () => {
         let response = await customerService.findById(param.id);
         setCustomers(response);
@@ -24,6 +29,7 @@ function CustomerUpdate() {
     const getCustomerType = async () => {
         setCustomerTypes(await customerService.getCustomerType());
     }
+
     const updateCustomer = async (data) => {
         console.log(data)
         let newCustomer = {
@@ -41,11 +47,6 @@ function CustomerUpdate() {
         }
     }
 
-    useEffect(() => {
-        getCustomer()
-        getCustomerType()
-    }, [])
-
     const initValue =
         customers &&
         {
@@ -60,9 +61,6 @@ function CustomerUpdate() {
             address: customers.address
         }
 
-    if (!customers) {
-        return null;
-    }
     const validateObject = {
         name: Yup.string()
             .required("Required"),
@@ -82,6 +80,11 @@ function CustomerUpdate() {
         customerType: Yup.string()
             .required("Required"),
     };
+
+    if (!customers) {
+        return null;
+    }
+
     return (
         <>
             <Formik

@@ -45,14 +45,14 @@
     {
       "id": 4,
       "name": "Dương",
-      "birthday": "2023-10-05",
+      "birthday": "1995-04-20",
       "gender": 1,
       "identity": "200012342001",
-      "phoneNumber": "0766513500",
+      "phoneNumber": "0707600447",
       "email": "nguyenduong@gmail.com",
       "customerType": {
-        "id": 1,
-        "name": "Diamond"
+        "id": 2,
+        "name": "Platinum"
       },
       "address": "Quảng Nam"
     },
@@ -71,18 +71,32 @@
       "address": "122 Dien Bien Phu"
     },
     {
-      "name": "Nguyễn Dương",
-      "birthday": "1995-04-20",
+      "id": 8,
+      "name": "Thiện",
+      "birthday": "1997-06-11",
       "gender": "1",
       "identity": "200012342001",
-      "phoneNumber": "0707600447",
-      "email": "nguyenduong@gmail.com",
+      "phoneNumber": "0766513505",
+      "email": "levandoki@gmail.com",
+      "customerType": {
+        "id": 4,
+        "name": "Silver"
+      },
+      "address": "123 Dien Bien Phu"
+    },
+    {
+      "id": 9,
+      "name": "Thắng",
+      "birthday": "1994-07-30",
+      "gender": "1",
+      "identity": "200012342001",
+      "phoneNumber": "0766513500",
+      "email": "thang@gmail.com",
       "customerType": {
         "id": 1,
         "name": "Diamond"
       },
-      "address": "Quảng Nam",
-      "id": 7
+      "address": "lê độ"
     }
   ],
   "customerType": [
@@ -134,7 +148,7 @@
     },
     {
       "id": 5,
-      "contractNumber": "HD-002",
+      "contractNumber": "HD-013",
       "startDate": "1999-11-10",
       "endDate": "2000-10-20",
       "deposit": 1009990,

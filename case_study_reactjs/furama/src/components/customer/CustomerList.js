@@ -39,7 +39,7 @@ export function CustomerList() {
             <h1 style={{textAlign: "center"}}>Danh sách khách hàng</h1>
             <div style={{ display: "flex", alignItems: "center" , marginRight:"35px"}}>
                 <NavLink style={{marginLeft: "20px"}} to="/customers/create">
-                    <button className="btn btn-success">Thêm </button>
+                    <button className="btn btn-success">Thêm</button>
                 </NavLink>
                 <input className="form-control" style={{marginLeft: "750px", height: "40px"}} onChange={(evt) => setName(evt.target.value)}
                        placeholder="Nhập tên khách hàng" type="text"/>

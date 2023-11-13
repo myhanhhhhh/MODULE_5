@@ -110,4 +110,3 @@ function MyModal(props) {
     );
 }
 
-export default BookList

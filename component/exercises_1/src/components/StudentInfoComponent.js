@@ -4,6 +4,7 @@ import ReactDOM from "react-dom/client";
 // import App from './App';
 class StudentInfoComponent extends Component {
     constructor() {
+
         super();
         this.state = {
             data:

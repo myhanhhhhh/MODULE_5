@@ -31,7 +31,7 @@ function App() {
                 <Route path="/villas/create" element={<FacilityCreate/>}/>
 
             </Routes>
-            <Footer/>
+            {/*<Footer/>*/}
         </>
     );
 }

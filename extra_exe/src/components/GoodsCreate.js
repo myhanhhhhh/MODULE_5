@@ -11,13 +11,12 @@ function GoodsCreate() {
     const navigate = useNavigate();
     const [goodsTypes, setGoodsTypes] = useState([])
 
-
     useEffect(() => {
-        getGoodsType()
+        getTypes();
     }, [])
-
-    const getGoodsType = async () => {
-        setGoodsTypes(await goodsService.getGoodsType());
+    const getTypes = async () => {
+        const res = await goodsService.getGoodsType();
+        setGoodsTypes(res);
     }
 
     const createGoods = async (data) => {
@@ -46,6 +45,7 @@ function GoodsCreate() {
         }),
         time: "",
     };
+    const currentDate = new Date();
 
     const validateObject = {
         goodsCode: Yup.string()
@@ -53,28 +53,32 @@ function GoodsCreate() {
             .matches(/^MHH-[A-Z0-9]+$/, "+ Mã hàng hoá (MHH-XXXX) => X là các số hoặc chữ in Hoa"),
         name: Yup.string()
             .required("Required"),
-        unit: Yup.number()
-            .required("Required"),
+        // unit: Yup.number()
+        //     .required("Required"),
         price: Yup.string()
             .required("Required")
             .min(1, "Giá phải là số nguyên dương  và >= 1.000 VNĐ"),
-        time: Yup.string()
-            .required("Required"),
+        time: Yup.date()
+            .required()
+            .min(currentDate)
     };
+    if (goodsTypes.length == 0) {
+        return null;
+    }
 
     return (
         <>
+
             <Formik
                 initialValues={initValue}
                 onSubmit={(values) => {
-                    console.log(values)
                     createGoods(values)
                 }}
                 validationSchema={Yup.object(validateObject)
                 }
             >
                 <div className='container' style={{marginLeft: "220px", width: "70%"}}>
-                    <h1 className="mb-4">Thêm mới hàng hoá</h1>
+                    <h1 className="mb-4" style={{textAlign: "center", marginTop:"30px"}}>Thêm mới hàng hoá</h1>
                     <Form>
                         <div className='mb-3'>
                             <b htmlFor='studentPhone' className='form-label'>Mã hàng hoá<span
@@ -112,7 +116,7 @@ function GoodsCreate() {
                             <div>
                                 <Field as="select" id="goodsType" name="goodsType" className="form-control"
                                        style={{width: "100%"}}>
-                                    {goodsTypes.map((goods, index) => (
+                                    {goodsTypes && goodsTypes.map((goods, index) => (
                                         <option key={index} value={JSON.stringify(goods)}>
                                             {goods.name}
                                         </option>
